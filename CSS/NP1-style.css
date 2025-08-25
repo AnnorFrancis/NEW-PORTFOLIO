@@ -1,0 +1,420 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ...existing code... */
+
+/* Header styles */
+header {
+  background: white;
+  padding: 10px;
+  box-shadow: 0 2px 8px lightblue;
+  position: sticky;
+  color: black;
+  top: 0;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/030/657/001/non_2x/a-minimal-graphic-design-wallpaper-free-photo.jpg"); /* Replace with your image file */
+  background-size: cover; /* Makes the image cover the whole header */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+/* Logo styles and animation */
+.logo {
+  display: flex;
+  align-self: flex-start; /* Align to top */
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.logo p {
+  font-family: "Inter", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: black;
+  letter-spacing: 3px;
+  margin: 0;
+  padding: 0 18px;
+  background: linear-gradient(90deg, #ff8c00, #ff2d55, #00c3ff, #ff8c00);
+  background-size: 300% 300%;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px 0 rgba(255, 140, 0, 0.15);
+  animation: logoFlow 3s linear infinite;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+/* Logo hover effect */
+.logo p:hover {
+  transform: scale(1.12) rotate(-2deg);
+  box-shadow: 0 6px 32px 0 rgba(255, 45, 85, 0.25);
+}
+
+/* Flowing gradient animation */
+@keyframes logoFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ...existing code... */
+
+/* Navigation styles */
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  display: flex;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.3s cubic-bezier(0.4, 2, 0.6, 1),
+    transform 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+}
+
+/* Animated underline effect */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff8c00, #ff2d55);
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.4, 2, 0.6, 1);
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #ff8c00;
+  transform: scale(1.18) rotate(-2deg);
+  letter-spacing: 2px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Optional: Add a little bounce on click */
+.nav-links a:active {
+  transform: scale(0.95) rotate(1deg);
+}
+
+/* ...existing code... */
+/* section 1- sec1 */
+
+/* ...existing code... */
+
+.sec1 {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr; /* Two columns: text left, image right */
+  grid-template-rows: auto;
+
+  /* align-items: center; */
+  justify-items: center;
+  align-content: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 4vw;
+  min-height: 70vh;
+  background: linear-gradient(120deg, #f8fafc 60%, #e0e7ff 100%);
+  background: linear-gradient(
+    270deg,
+    #ffecd2,
+    #fcb69f,
+    #a1c4fd,
+    #c2e9fb,
+    #fcb69f
+  );
+  background-size: 200% 200%;
+  animation: sec1GradientMove 8s ease-in-out infinite;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+@keyframes sec1GradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Animate text and image in */
+.sec1 .intro {
+  animation: slideInLeft 1.2s cubic-bezier(0.4, 2, 0.6, 1) 0.2s both;
+}
+
+.sec1 .intro h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #181818;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ff8c00, #ff2d55, #00c3ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 3s linear infinite;
+}
+
+@keyframes gradientText {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.sec1 .intro p {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 28px;
+  line-height: 1.7;
+  animation: fadeIn 1.5s 0.6s both;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: linear-gradient(90deg, #ff8c00, #ff2d55);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px 0 rgba(255, 45, 85, 0.15);
+  /* transition: transform 0.2s, box-shadow 0.2s; */
+  /* animation: fadeInUp 1.2s 1s both; */
+  text-decoration: none;
+}
+.btn:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s cubic-bezier(0.4, 2, 0.6, 1);
+  box-shadow: 0 8px 32px 0 rgba(255, 45, 85, 0.25);
+}
+
+/* Image styles and animation */
+.sec1 .intro div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  animation: slideInRight 1.2s cubic-bezier(0.4, 2, 0.6, 1) 0.4s both;
+}
+
+.sec1 .intro img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+  transition: transform 0.4s cubic-bezier(0.4, 2, 0.6, 1), box-shadow 0.4s;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  background: #fff;
+}
+
+.sec1 .intro img:hover {
+  transform: scale(1.06) rotate(-2deg);
+  box-shadow: 0 16px 48px 0 rgba(255, 45, 85, 0.18);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+  .sec1 {
+    grid-template-columns: 1fr;
+    padding: 40px 5vw;
+    text-align: center;
+  }
+  .sec1 .intro div {
+    justify-content: center;
+    margin-top: 24px;
+  }
+}
+
+/* ...existing code... */
+
+/* ...existing code... */
+
+/* ...existing code... */
+
+/* Slideshow container with fixed height for the boxes */
+.services-slideshow {
+  position: absolute;
+  right: 7vw;
+  top: 70%;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 110px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+/* Each slide-box is a big bordered card */
+.slide-box {
+  position: absolute;
+  width: 320px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #181818;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 24px;
+  border: 4px solid;
+  border-image: linear-gradient(90deg, #ff8c00, #ff2d55, #00c3ff, #ff8c00) 1;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 0.5s, transform 0.5s;
+  animation: slideBoxShow 16s infinite;
+}
+
+/* Animate each box with delay so they appear one after another */
+.slide-box:nth-child(1) {
+  animation-delay: 0s;
+}
+.slide-box:nth-child(2) {
+  animation-delay: 2s;
+}
+.slide-box:nth-child(3) {
+  animation-delay: 4s;
+}
+.slide-box:nth-child(4) {
+  animation-delay: 6s;
+}
+.slide-box:nth-child(5) {
+  animation-delay: 8s;
+}
+.slide-box:nth-child(6) {
+  animation-delay: 10s;
+}
+.slide-box:nth-child(7) {
+  animation-delay: 12s;
+}
+.slide-box:nth-child(8) {
+  animation-delay: 14s;
+}
+
+@keyframes slideBoxShow {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.95);
+  }
+}
+
+/* Responsive: move below image on small screens */
+@media (max-width: 900px) {
+  .services-slideshow {
+    position: static;
+    transform: none;
+    margin: 32px auto 0 auto;
+    width: 90vw;
+    max-width: 350px;
+    top: auto;
+    right: auto;
+  }
+  .slide-box {
+    width: 98%;
+    min-width: 0;
+  }
+}
+
+/* ...existing code... */
