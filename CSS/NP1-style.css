@@ -321,7 +321,7 @@ header {
   right: 7vw;
   top: 70%;
   transform: translateY(-50%);
-  width: 340px;
+  width: 440px;
   height: 110px;
   overflow: hidden;
   display: flex;
@@ -624,13 +624,38 @@ header {
   line-height: 1.6;
   margin: 0;
 }
-
 @media (max-width: 700px) {
   .unique-title {
     font-size: 2rem;
+    margin-bottom: 28px;
   }
   .unique-card {
     padding: 28px 12px 24px 12px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .unique-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .unique-card {
+    padding: 28px 12px 24px 12px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .unique-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .unique-card {
+    padding: 28px 12px 24px 12px;
+    border-radius: 18px;
   }
 }
 
@@ -658,4 +683,101 @@ header {
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+.sec3 {
+  display: grid;
+  flex-direction: column;
+  gap: 12px;
+  align-items: left;
+  justify-content: left;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0, 140, 255, 0.08);
+  padding: 18px;
+  margin: 10px;
+}
+
+.sec3 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 24px 0;
+  border: 1px solid lightblue;
+}
+.sec3 h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: black;
+  letter-spacing: 3px;
+  margin: 0;
+  padding: 0 18px;
+  background: linear-gradient(90deg, #ff8c00, #ff2d55, #00c3ff, #ff8c00);
+  background-size: 300% 300%;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px 0 rgba(255, 140, 0, 0.15);
+  animation: logoFlow 3s linear infinite;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+/* Logo hover effect */
+.sec3 h1:hover {
+  transform: scale(1.12) rotate(-2deg);
+  box-shadow: 0 6px 32px 0 rgba(255, 45, 85, 0.25);
+}
+
+/* Flowing gradient animation */
+@keyframes logoFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.skills-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.skill-name {
+  font-weight: 600;
+  /* margin-bottom: 2px; */
+  color: #0a2540;
+}
+.skill-bar {
+  background: #e0e7ef;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 18px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+}
+.skill-percentage {
+  background: linear-gradient(90deg, #00c3ff, #ff8c00);
+  color: #fff;
+  font-weight: 400;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 6px;
+  font-size: 15px;
+  border-radius: 8px 0 0 8px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px 0 rgba(0, 195, 255, 0.08);
 }
